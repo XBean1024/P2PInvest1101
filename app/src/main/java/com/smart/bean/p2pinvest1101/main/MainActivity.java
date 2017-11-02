@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101;
+package com.smart.bean.p2pinvest1101.main;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,11 +7,12 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.smart.bean.p2pinvest1101.abs.BaseActivity;
-import com.smart.bean.p2pinvest1101.fragment.HomepageFragment;
-import com.smart.bean.p2pinvest1101.fragment.InvestFragment;
-import com.smart.bean.p2pinvest1101.fragment.MineFragment;
-import com.smart.bean.p2pinvest1101.fragment.MoreFragment;
+import com.smart.bean.p2pinvest1101.R;
+import com.smart.bean.p2pinvest1101.main.abs.BaseFragmentActivity;
+import com.smart.bean.p2pinvest1101.main.fragment.HomepageFragment;
+import com.smart.bean.p2pinvest1101.main.fragment.InvestFragment;
+import com.smart.bean.p2pinvest1101.main.fragment.MineFragment;
+import com.smart.bean.p2pinvest1101.main.fragment.MoreFragment;
 import com.smart.bean.p2pinvest1101.util.P2PLogger;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.List;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseFragmentActivity {
 
     @BindView(R.id.main_container)
     FrameLayout mMainContainer;

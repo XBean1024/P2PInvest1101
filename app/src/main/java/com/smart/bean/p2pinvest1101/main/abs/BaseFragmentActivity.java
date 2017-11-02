@@ -1,14 +1,13 @@
-package com.smart.bean.p2pinvest1101.abs;
+package com.smart.bean.p2pinvest1101.main.abs;
 
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-
-import com.smart.bean.p2pinvest1101.R;
 
 import butterknife.ButterKnife;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseFragmentActivity extends FragmentActivity {
     public final String TAG = this.getClass().getSimpleName();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

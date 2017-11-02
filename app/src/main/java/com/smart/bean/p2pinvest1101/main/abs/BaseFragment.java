@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.abs;
+package com.smart.bean.p2pinvest1101.main.abs;
 
 
 import android.app.Activity;

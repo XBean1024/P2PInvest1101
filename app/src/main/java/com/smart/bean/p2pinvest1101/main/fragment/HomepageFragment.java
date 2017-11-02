@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.fragment;
+package com.smart.bean.p2pinvest1101.main.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.smart.bean.p2pinvest1101.R;
-import com.smart.bean.p2pinvest1101.abs.BaseFragment;
+import com.smart.bean.p2pinvest1101.main.abs.BaseFragment;
 
 /**
  * auther   : bean
@@ -16,10 +16,11 @@ import com.smart.bean.p2pinvest1101.abs.BaseFragment;
  * function :
  */
 
-public class MineFragment extends BaseFragment {
+public class HomepageFragment extends BaseFragment {
+
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_mine_page, container, false);
+        return inflater.inflate(R.layout.fragment_home_page, container, false);
     }
 
     @Override
