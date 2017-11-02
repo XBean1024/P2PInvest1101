@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.main.fragment;
+package com.smart.bean.p2pinvest1101.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.smart.bean.p2pinvest1101.R;
-import com.smart.bean.p2pinvest1101.main.abs.BaseFragment;
+import com.smart.bean.p2pinvest1101.abs.BaseFragment;
 
 /**
  * auther   : bean
@@ -17,6 +17,11 @@ import com.smart.bean.p2pinvest1101.main.abs.BaseFragment;
  */
 
 public class InvestFragment extends BaseFragment {
+    @Override
+    protected void initItmeView(View rootView) {
+
+    }
+
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_invest_page, container, false);

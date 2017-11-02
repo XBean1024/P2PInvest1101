@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.main;
+package com.smart.bean.p2pinvest1101;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -7,12 +7,11 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
-import com.smart.bean.p2pinvest1101.R;
-import com.smart.bean.p2pinvest1101.main.abs.BaseFragmentActivity;
-import com.smart.bean.p2pinvest1101.main.fragment.HomepageFragment;
-import com.smart.bean.p2pinvest1101.main.fragment.InvestFragment;
-import com.smart.bean.p2pinvest1101.main.fragment.MineFragment;
-import com.smart.bean.p2pinvest1101.main.fragment.MoreFragment;
+import com.smart.bean.p2pinvest1101.abs.BaseFragmentActivity;
+import com.smart.bean.p2pinvest1101.fragment.HomepageFragment;
+import com.smart.bean.p2pinvest1101.fragment.InvestFragment;
+import com.smart.bean.p2pinvest1101.fragment.MineFragment;
+import com.smart.bean.p2pinvest1101.fragment.MoreFragment;
 import com.smart.bean.p2pinvest1101.util.P2PLogger;
 
 import java.util.ArrayList;
@@ -64,6 +63,11 @@ public class MainActivity extends BaseFragmentActivity {
                 showFragment();
             }
         });
+    }
+
+    @Override
+    protected void initTitle() {
+
     }
 
     private void showFragment() {

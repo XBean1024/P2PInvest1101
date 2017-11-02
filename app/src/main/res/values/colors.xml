@@ -17,5 +17,6 @@
     <color name="my_title_bg">#28baed</color>
     <color name="more_text">#5A6E9E</color>
     <color name="white">#ffffff</color>
+    <color name="title_black">#000000</color>
 
 </resources>

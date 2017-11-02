@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.main.abs;
+package com.smart.bean.p2pinvest1101.abs;
 
 
 import android.app.Activity;
@@ -10,7 +10,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.util.P2PLogger;
+import com.smart.bean.p2pinvest1101.view.TitleBar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,9 +45,12 @@ public abstract class BaseFragment extends Fragment {
         P2PLogger.logInfo(TAG,TAG);
         if (mRootView == null) {
             mRootView = initView(inflater, container, savedInstanceState);
+            initItmeView(mRootView);
         }
         return mRootView;
     }
+
+    protected abstract void initItmeView(View rootView);
 
     protected abstract View initView(LayoutInflater inflater, ViewGroup container,
                                      Bundle savedInstanceState);
