@@ -1,6 +1,7 @@
 package com.smart.bean.p2pinvest1101.abs;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.widget.Toast;
@@ -28,13 +29,28 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
     }
 
 
+    /** 设置主布局
+     * @return 布局id
+     */
     protected abstract int initLayout();
 
+    /**
+     * 初始化view
+     */
     protected abstract void initView();
 
+    /**
+     * 初始化标题栏控件，如果有的话
+     */
     protected abstract void initTitle();
 
+    /**
+     * 初始化数据
+     */
     protected abstract void initData();
 
+    protected void skipToActivity(Class<?> cls){
+        startActivity(new Intent(this,cls));
+    }
 
 }

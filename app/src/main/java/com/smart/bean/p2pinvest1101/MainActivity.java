@@ -3,9 +3,11 @@ package com.smart.bean.p2pinvest1101;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.smart.bean.p2pinvest1101.abs.BaseFragmentActivity;
 import com.smart.bean.p2pinvest1101.fragment.HomepageFragment;
@@ -29,6 +31,7 @@ public class MainActivity extends BaseFragmentActivity {
     private List<Fragment> mFragmentList;
     private FragmentManager mFragmentManager;
     private int mPositon;
+    private long mFirstClickBackKeyTime;
 
     @Override
     protected int initLayout() {
@@ -110,5 +113,17 @@ public class MainActivity extends BaseFragmentActivity {
         mFragmentList.add(new InvestFragment());
         mFragmentList.add(new MineFragment());
         mFragmentList.add(new MoreFragment());
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        long deltTime = System.currentTimeMillis() - mFirstClickBackKeyTime;
+        mFirstClickBackKeyTime = System.currentTimeMillis();
+        if (keyCode == KeyEvent.KEYCODE_BACK && deltTime < 2000) {
+            return super.onKeyUp(keyCode, event);
+        } else {
+            Toast.makeText(mActivity, "点击两次退出！", Toast.LENGTH_SHORT).show();
+            return true;
+        }
     }
 }
