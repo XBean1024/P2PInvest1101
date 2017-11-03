@@ -11,6 +11,7 @@
         android:background="@color/bottom_line"
         />
     <RadioGroup
+        android:background="@color/title_black"
         android:id="@+id/main_bottom_rg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
