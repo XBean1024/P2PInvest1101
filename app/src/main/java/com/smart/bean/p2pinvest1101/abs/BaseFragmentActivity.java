@@ -22,11 +22,13 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
         setContentView(initLayout());
         mActivity = this;
         ButterKnife.bind(this);
-        initView();
         initTitle();
+        initView();
         initData();
-
+        bindData();
     }
+
+
 
 
     /** 设置主布局
@@ -48,6 +50,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
      * 初始化数据
      */
     protected abstract void initData();
+    protected abstract void bindData();
 
     protected void skipToActivity(Class<?> cls){
         startActivity(new Intent(this,cls));

@@ -34,6 +34,11 @@ public class WebActivity extends BaseFragmentActivity {
     }
 
     @Override
+    protected void bindData() {
+
+    }
+
+    @Override
     protected int initLayout() {
         return R.layout.activity_web;
     }

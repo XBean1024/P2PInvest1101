@@ -34,6 +34,11 @@ public class MainActivity extends BaseFragmentActivity {
     private long mFirstClickBackKeyTime;
 
     @Override
+    protected void bindData() {
+
+    }
+
+    @Override
     protected int initLayout() {
         return R.layout.activity_main;
     }

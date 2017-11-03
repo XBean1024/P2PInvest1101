@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:paddingBottom="5dp">
 
     <View
         android:layout_width="match_parent"
@@ -22,33 +23,39 @@
             android:drawableTop="@drawable/home_page_selector"
             android:text="@string/home_page"
             />
+
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/bottom_line"
             />
+
         <RadioButton
             android:id="@+id/invest_page"
             style="@style/main_bottom_radio_button_style"
             android:drawableTop="@drawable/invest_selector"
             android:text="@string/invest"
             />
+
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/bottom_line"
             />
+
         <RadioButton
             android:id="@+id/mine_page"
             style="@style/main_bottom_radio_button_style"
             android:drawableTop="@drawable/mine_selector"
             android:text="@string/mine"
             />
+
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:background="@color/bottom_line"
             />
+
         <RadioButton
             android:id="@+id/more_page"
             style="@style/main_bottom_radio_button_style"
@@ -56,4 +63,10 @@
             android:text="@string/more"
             />
     </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/bottom_line"
+        />
 </LinearLayout>
