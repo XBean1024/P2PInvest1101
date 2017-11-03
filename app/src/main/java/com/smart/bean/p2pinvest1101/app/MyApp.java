@@ -2,6 +2,7 @@ package com.smart.bean.p2pinvest1101.app;
 
 import android.app.Application;
 
+import com.smart.bean.p2pinvest1101.util.InItUtil;
 import com.smart.bean.p2pinvest1101.util.PhoneInfo;
 
 /**
@@ -16,6 +17,6 @@ public class MyApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
-        PhoneInfo.init(this);
+        InItUtil.init(this);
     }
 }

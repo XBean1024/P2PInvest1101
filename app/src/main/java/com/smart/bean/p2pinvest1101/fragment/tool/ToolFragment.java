@@ -36,7 +36,7 @@ public class ToolFragment extends BaseFragment implements OnViewHolderItemClicke
         ToolBean testBean1 = new ToolBean();
         testBean1.setName("获取手机号");
         mBeanList.add(testBean1);
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 200; i++) {
             ToolBean testBean = new ToolBean();
             testBean.setName("测试"+i);
             mBeanList.add(testBean);
@@ -50,7 +50,7 @@ public class ToolFragment extends BaseFragment implements OnViewHolderItemClicke
 
     @Override
     protected void bindData() {
-        mGridViewTest.setAdapter(new CommonAdapter<>(mActivity,mBeanList,R.layout.item_tool,new HolderHelper(this)));
+        mGridViewTest.setAdapter(new CommonAdapter<>(mActivity,mBeanList,R.layout.item_grid_tool,new HolderHelper(this)));
     }
 
     @Override
