@@ -2,7 +2,6 @@ package com.smart.bean.p2pinvest1101.avtivity;
 
 import android.os.Handler;
 
-import com.smart.bean.p2pinvest1101.MainActivity;
 import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.abs.BaseFragmentActivity;
 

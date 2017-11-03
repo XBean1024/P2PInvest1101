@@ -3,13 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".abs.BaseFragment">
-    <TextView
-        android:id="@+id/home_text_btn"
+    tools:context="com.smart.bean.p2pinvest1101.fragment.tool.ToolFragment">
+
+    <GridView
+        android:id="@+id/grid_view_test"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="@string/home_page"/>
+        android:numColumns="3"/>
 
 </LinearLayout>

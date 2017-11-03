@@ -20,15 +20,16 @@ public class WebActivity extends BaseFragmentActivity {
     @Override
     protected void initTitle() {
         mTitleBar = findViewById(R.id.title_bar);
-        mTitleBar.setTitleBarClickedListener("首页", R.drawable.left, R.drawable.setting_icon, new OnTitleBarClickedListener() {
+        mTitleBar.setBackgroundResource(R.drawable.title_bg_grey);
+        mTitleBar.setTitleBarClickedListener("首页", R.drawable.title_left, R.drawable.setting_icon, new OnTitleBarClickedListener() {
             @Override
             public void onLeftBtnClicked() {
-                Toast.makeText(mActivity, "left", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mActivity, "title_left", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onRightBtnClicked() {
-                Toast.makeText(mActivity, "right", Toast.LENGTH_SHORT).show();
+                Toast.makeText(mActivity, "title_right", Toast.LENGTH_SHORT).show();
             }
         });
     }

@@ -12,7 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".avtivity.MainActivity">
         </activity>
         <activity android:name=".avtivity.WebActivity">
         </activity>
@@ -31,8 +31,6 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".test.fisrtui.TestActivity">
-        </activity>
     </application>
 
 </manifest>

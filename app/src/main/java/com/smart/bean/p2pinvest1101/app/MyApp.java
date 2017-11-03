@@ -2,7 +2,7 @@ package com.smart.bean.p2pinvest1101.app;
 
 import android.app.Application;
 
-import com.smart.bean.p2pinvest1101.test.util.PhoneInfo;
+import com.smart.bean.p2pinvest1101.util.PhoneInfo;
 
 /**
  * auther   : bean

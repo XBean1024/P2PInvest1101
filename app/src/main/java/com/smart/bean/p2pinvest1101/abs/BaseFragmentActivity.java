@@ -11,17 +11,19 @@ import com.smart.bean.p2pinvest1101.callback.OnTitleBarClickedListener;
 import com.smart.bean.p2pinvest1101.view.TitleBar;
 
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 
 public abstract class BaseFragmentActivity extends FragmentActivity {
     public final String TAG = this.getClass().getSimpleName();
     protected Activity mActivity;
+    private Unbinder unbinder;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(initLayout());
         mActivity = this;
-        ButterKnife.bind(this);
+        unbinder = ButterKnife.bind(this);
         initTitle();
         initView();
         initData();
@@ -56,4 +58,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
         startActivity(new Intent(this,cls));
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unbinder.unbind();
+    }
 }

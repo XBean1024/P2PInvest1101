@@ -106,6 +106,11 @@ public class P2PLogger {
             printLog(D, tag, msg);
         }
     }
+    public static void logInfo(String msg) {
+        if (isDebug) {
+            printLog(D, "test", msg);
+        }
+    }
 
     /**
      * 用于打印错误信息

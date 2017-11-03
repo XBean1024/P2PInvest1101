@@ -1,13 +1,12 @@
 <resources>
     <string name="app_name">P2P金融</string>
     <string name="home_page">首页</string>
-    <string name="invest">投资</string>
-    <string name="mine">我的</string>
+    <string name="means">财富</string>
+    <string name="news">新闻</string>
     <string name="more">更多</string>
+    <string name="mine">我的</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="fragment_home_page">首页</string>
-    <string name="fragment_invset_page">投资</string>
-    <string name="fragment_mine_page">我的</string>
-    <string name="fragment_more_page">更多</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tool">工具</string>
 </resources>

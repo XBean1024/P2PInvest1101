@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:orientation="vertical"
-              android:paddingBottom="5dp">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/bottom_line"
         />
-
     <RadioGroup
         android:id="@+id/main_bottom_rg"
         android:layout_width="match_parent"
@@ -20,7 +19,7 @@
         <RadioButton
             android:id="@+id/home_page"
             style="@style/main_bottom_radio_button_style"
-            android:drawableTop="@drawable/home_page_selector"
+            android:drawableTop="@drawable/home_selector"
             android:text="@string/home_page"
             />
 
@@ -31,10 +30,10 @@
             />
 
         <RadioButton
-            android:id="@+id/invest_page"
+            android:id="@+id/means_page"
             style="@style/main_bottom_radio_button_style"
-            android:drawableTop="@drawable/invest_selector"
-            android:text="@string/invest"
+            android:drawableTop="@drawable/means_selector"
+            android:text="@string/means"
             />
 
         <View
@@ -44,7 +43,20 @@
             />
 
         <RadioButton
-            android:id="@+id/mine_page"
+            android:id="@+id/news_page"
+            style="@style/main_bottom_radio_button_style"
+            android:drawableTop="@drawable/news_selector"
+            android:text="@string/news"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/bottom_line"
+            />
+
+        <RadioButton
+            android:id="@+id/more_page"
             style="@style/main_bottom_radio_button_style"
             android:drawableTop="@drawable/mine_selector"
             android:text="@string/mine"
@@ -57,10 +69,10 @@
             />
 
         <RadioButton
-            android:id="@+id/more_page"
+            android:id="@+id/tool_page"
             style="@style/main_bottom_radio_button_style"
-            android:drawableTop="@drawable/more_selector"
-            android:text="@string/more"
+            android:drawableTop="@drawable/tool_selector"
+            android:text="@string/tool"
             />
     </RadioGroup>
 

@@ -10,9 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.util.P2PLogger;
-import com.smart.bean.p2pinvest1101.view.TitleBar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +22,7 @@ public abstract class BaseFragment extends Fragment {
 
     protected Context mContext;
     protected Activity mActivity;
+
     public BaseFragment() {
     }
 
@@ -44,13 +43,15 @@ public abstract class BaseFragment extends Fragment {
                              Bundle savedInstanceState) {
         P2PLogger.logInfo(TAG,TAG);
         if (mRootView == null) {
+            P2PLogger.logInfo("dddddddddddddddddddddd");
             mRootView = initView(inflater, container, savedInstanceState);
-            initItmeView(mRootView);
+            P2PLogger.logInfo("22222222222");
+            initItemView(mRootView);
         }
         return mRootView;
     }
 
-    protected abstract void initItmeView(View rootView);
+    protected abstract void initItemView(View rootView);
 
     protected abstract View initView(LayoutInflater inflater, ViewGroup container,
                                      Bundle savedInstanceState);
@@ -62,4 +63,9 @@ public abstract class BaseFragment extends Fragment {
     }
 
     protected abstract void bindData();
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }
