@@ -9,4 +9,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tool">工具</string>
+    <string name="get_phone_num">获取手机号</string>
+
+    <string-array name="tool_item">
+        <item>canvas</item>
+        <item>获取手机号</item>
+    </string-array>
 </resources>

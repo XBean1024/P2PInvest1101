@@ -28,6 +28,11 @@ public class MeansFragment extends BaseFragment {
     }
 
     @Override
+    protected void initData() {
+
+    }
+
+    @Override
     protected void bindData() {
 
     }

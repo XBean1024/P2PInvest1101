@@ -31,6 +31,10 @@
             </intent-filter>
         </receiver>
 
+        <activity android:name=".fragment.tool.canvas.CanvasActivity">
+        </activity>
+        <activity android:name=".fragment.tool.music.MusicActivity">
+        </activity>
     </application>
 
 </manifest>

@@ -10,9 +10,10 @@ import android.widget.GridView;
 
 import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.abs.BaseFragment;
+import com.smart.bean.p2pinvest1101.fragment.tool.canvas.CanvasActivity;
 import com.smart.bean.p2pinvest1101.fragment.tool.bean.ToolBean;
-import com.smart.bean.p2pinvest1101.util.PhoneInfo;
-import com.smart.bean.p2pinvest1101.util.P2PLogger;
+import com.smart.bean.p2pinvest1101.fragment.tool.music.MusicActivity;
+import com.smart.bean.p2pinvest1101.util.Util;
 import com.smart.holder.CommonAdapter;
 
 import java.util.ArrayList;
@@ -26,26 +27,32 @@ public class ToolFragment extends BaseFragment implements OnViewHolderItemClicke
 
     GridView mGridViewTest;
     private List<ToolBean> mBeanList;
+    private String mToolItems[];
     public ToolFragment() {
         // Required empty public constructor
     }
-    @Override
-    protected void initItemView(View rootView) {
-        mGridViewTest = rootView.findViewById(R.id.grid_view_test);
-        mBeanList = new ArrayList<>();
-        ToolBean testBean1 = new ToolBean();
-        testBean1.setName("获取手机号");
-        mBeanList.add(testBean1);
-        for (int i = 0; i < 200; i++) {
-            ToolBean testBean = new ToolBean();
-            testBean.setName("测试"+i);
-            mBeanList.add(testBean);
-        }
-    }
+
 
     @Override
     protected View initView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_tool, container,false);
+    }
+
+    @Override
+    protected void initItemView(View rootView) {
+        mGridViewTest = rootView.findViewById(R.id.grid_view_test);
+
+    }
+    @Override
+    protected void initData() {
+        mBeanList = new ArrayList<>();
+         mToolItems = Util.getStringArray(R.array.tool_item);
+        int len = mToolItems.length;
+        for (String anArray : mToolItems) {
+            ToolBean testBean = new ToolBean();
+            testBean.setName(anArray);
+            mBeanList.add(testBean);
+        }
     }
 
     @Override
@@ -55,11 +62,12 @@ public class ToolFragment extends BaseFragment implements OnViewHolderItemClicke
 
     @Override
     public void onItemClicked(String itemName) {
-        if (itemName == "获取手机号") {
-            P2PLogger.logInfo(TAG, PhoneInfo.getPhoneInfo());
+        if (itemName == mToolItems[0]) {//canvas
+            skipToActivity(CanvasActivity.class);
+        }
+        else if (itemName == mToolItems[1]) {//音乐播放器
+            skipToActivity(MusicActivity.class);
         }
     }
-    final String[] names = new String[]{
-            "获取手机号",
-    };
+
 }

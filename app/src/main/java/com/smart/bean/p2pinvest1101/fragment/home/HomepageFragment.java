@@ -34,6 +34,11 @@ public class HomepageFragment extends BaseFragment {
     }
 
     @Override
+    protected void initData() {
+
+    }
+
+    @Override
     protected void bindData() {
         mHomeTextBtn.setOnClickListener(new View.OnClickListener() {
             @Override

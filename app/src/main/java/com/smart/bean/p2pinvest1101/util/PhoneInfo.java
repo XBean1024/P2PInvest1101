@@ -15,7 +15,7 @@ import android.view.WindowManager;
 public class PhoneInfo {
 
     private static TelephonyManager tm;
-    private static Context mContext = InItUtil.getContext();
+    private static Context mContext = Util.getContext();
 
     /**
      * 获取SIM硬件信息

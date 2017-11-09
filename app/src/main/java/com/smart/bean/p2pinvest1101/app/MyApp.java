@@ -1,9 +1,8 @@
 package com.smart.bean.p2pinvest1101.app;
 
 import android.app.Application;
-
-import com.smart.bean.p2pinvest1101.util.InItUtil;
-import com.smart.bean.p2pinvest1101.util.PhoneInfo;
+import android.content.Context;
+import android.os.Handler;
 
 /**
  * auther   : bean
@@ -14,9 +13,16 @@ import com.smart.bean.p2pinvest1101.util.PhoneInfo;
  */
 
 public class MyApp extends Application {
+    public static Context mContext;
+    public static Handler mHandler;
+    public static Thread mMainThread;
+    public static int mMainThreadId;
     @Override
     public void onCreate() {
         super.onCreate();
-        InItUtil.init(this);
+        mContext = this.getApplicationContext();
+        mHandler = new Handler();
+        mMainThread = Thread.currentThread();
+        mMainThreadId = android.os.Process.myTid();//获取当前线程的ID
     }
 }
