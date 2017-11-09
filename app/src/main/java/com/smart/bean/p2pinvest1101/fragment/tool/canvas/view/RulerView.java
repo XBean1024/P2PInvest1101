@@ -59,7 +59,8 @@ public class RulerView extends View {
         mPaint = new Paint();
         mGraduationStartX = mWindowWidth = Util.getWindowWidth();
         mRulerLength = mWindowWidth * 4;
-        mWindowHeight = Util.getWindowHeight();
+        mWindowHeight = 600;
+//        mWindowHeight = Util.getWindowHeight();
         mWindowWidthHalf = mWindowWidth / 2;
         mWindowHeightHalf = mWindowHeight / 2;
         this.scrollBy(mWindowWidthHalf, 0);//初始化的时候，向左平移半个屏幕
@@ -68,6 +69,51 @@ public class RulerView extends View {
     public RulerView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         init(context);
+    }
+
+    /**
+     * view的大小控制
+     */
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+
+        setMeasuredDimension(measureWidth(widthMeasureSpec),
+                measureHeight(heightMeasureSpec));
+
+    }
+
+    private int measureHeight(int measureSpec) {
+        int result = 0;
+        int mode = MeasureSpec.getMode(measureSpec);
+        int size = MeasureSpec.getSize(measureSpec);
+
+        if (mode == MeasureSpec.EXACTLY) {
+            result = size;
+        } else {
+            result=600;
+            if (mode == MeasureSpec.AT_MOST) {
+                result = Math.min(result, size);
+            }
+        }
+        return result;
+
+    }
+
+    private int measureWidth(int measureSpec) {
+        int result = 0;
+        int mode = MeasureSpec.getMode(measureSpec);
+        int size = MeasureSpec.getSize(measureSpec);
+
+        if (mode == MeasureSpec.EXACTLY) {
+            result = size;
+        } else {
+            result = 200;//根据自己的需要更改
+            if (mode == MeasureSpec.AT_MOST) {
+                result = Math.min(result, size);
+            }
+        }
+        return result;
+
     }
 
     @Override
