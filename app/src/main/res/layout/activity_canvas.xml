@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.smart.bean.p2pinvest1101.fragment.tool.canvas.CanvasActivity">
+    tools:context="com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity.RulerActivity">
 
     <TextView
         android:gravity="center"

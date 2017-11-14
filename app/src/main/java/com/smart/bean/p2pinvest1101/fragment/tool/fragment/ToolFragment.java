@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.fragment.tool;
+package com.smart.bean.p2pinvest1101.fragment.tool.fragment;
 
 
 import android.os.Bundle;
@@ -10,8 +10,11 @@ import android.widget.GridView;
 
 import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.abs.BaseFragment;
-import com.smart.bean.p2pinvest1101.fragment.tool.canvas.CanvasActivity;
 import com.smart.bean.p2pinvest1101.fragment.tool.bean.ToolBean;
+import com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity.RulerActivity;
+import com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity.ScaleViewActivity;
+import com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity.WatchActivity;
+import com.smart.bean.p2pinvest1101.fragment.tool.canvas.view.ScaleView;
 import com.smart.bean.p2pinvest1101.fragment.tool.music.MusicActivity;
 import com.smart.bean.p2pinvest1101.util.Util;
 import com.smart.holder.CommonAdapter;
@@ -62,11 +65,17 @@ public class ToolFragment extends BaseFragment implements OnViewHolderItemClicke
 
     @Override
     public void onItemClicked(String itemName) {
-        if (itemName == mToolItems[0]) {//canvas
-            skipToActivity(CanvasActivity.class);
-        }
-        else if (itemName == mToolItems[1]) {//音乐播放器
+        if (itemName == mToolItems[0]) {//music
             skipToActivity(MusicActivity.class);
+        }
+        else if (itemName == mToolItems[1]) {//尺子
+            skipToActivity(RulerActivity.class);
+        }
+        else if (itemName == mToolItems[2]) {//表盘
+            skipToActivity(WatchActivity.class);
+        }
+        else if (itemName == mToolItems[3]) {//缩放
+            skipToActivity(ScaleViewActivity.class);
         }
     }
 

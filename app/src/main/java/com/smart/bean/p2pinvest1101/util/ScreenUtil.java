@@ -1,0 +1,52 @@
+package com.smart.bean.p2pinvest1101.util;
+
+import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.res.Resources;
+import android.os.Build;
+import android.view.Gravity;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.LinearLayout;
+
+/**
+ * auther   : bean
+ * on       : 2017/11/14
+ * QQ       : 596928539
+ * github   : https://github.com/Xbean1024
+ * function : 一行代码设置沉浸栏
+ */
+
+public class ScreenUtil {
+    @TargetApi(19)
+    public static void setStatusBarColor(Activity activity, int color) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+            activity.getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
+            ViewGroup decorViewGroup = (ViewGroup)activity.getWindow().getDecorView();
+            //获取自己布局的根视图
+            View rootView = ((ViewGroup) (decorViewGroup.findViewById(android.R.id.content))).getChildAt(0);
+            //预留状态栏位置
+            rootView.setFitsSystemWindows(true);
+
+            //添加状态栏高度的视图布局，并填充颜色
+            View statusBarTintView = new View(activity);
+            LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                    getInternalDimensionSize(activity.getResources(), "status_bar_height"));
+            params.gravity = Gravity.TOP;
+            statusBarTintView.setLayoutParams(params);
+            statusBarTintView.setBackgroundColor(color);
+            decorViewGroup.addView(statusBarTintView);
+        }
+    }
+
+    private static int getInternalDimensionSize(Resources res, String key) {
+        int result = 0;
+        int resourceId = res.getIdentifier(key, "dimen", "android");
+        if (resourceId > 0) {
+            result = res.getDimensionPixelSize(resourceId);
+        }
+        return result;
+    }
+}

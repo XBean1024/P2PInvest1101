@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.fragment.tool;
+package com.smart.bean.p2pinvest1101.fragment.tool.fragment;
 
 import android.content.Context;
 import android.view.View;

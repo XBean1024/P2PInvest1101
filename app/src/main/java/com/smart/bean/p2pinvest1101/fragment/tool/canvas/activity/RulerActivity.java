@@ -1,4 +1,4 @@
-package com.smart.bean.p2pinvest1101.fragment.tool.canvas;
+package com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity;
 
 import android.util.Log;
 import android.widget.TextView;
@@ -7,7 +7,7 @@ import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.abs.BaseFragmentActivity;
 import com.smart.bean.p2pinvest1101.fragment.tool.canvas.view.RulerView;
 
-public class CanvasActivity extends BaseFragmentActivity implements RulerView.OnRulerValueChangedListener {
+public class RulerActivity extends BaseFragmentActivity implements RulerView.OnRulerValueChangedListener {
 
 
     private RulerView mRulerView;

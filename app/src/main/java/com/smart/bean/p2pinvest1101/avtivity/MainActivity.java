@@ -15,7 +15,7 @@ import com.smart.bean.p2pinvest1101.fragment.home.HomepageFragment;
 import com.smart.bean.p2pinvest1101.fragment.means.MeansFragment;
 import com.smart.bean.p2pinvest1101.fragment.news.NewsFragment;
 import com.smart.bean.p2pinvest1101.fragment.mine.MineFragment;
-import com.smart.bean.p2pinvest1101.fragment.tool.ToolFragment;
+import com.smart.bean.p2pinvest1101.fragment.tool.fragment.ToolFragment;
 import com.smart.bean.p2pinvest1101.util.P2PLogger;
 
 import java.util.ArrayList;

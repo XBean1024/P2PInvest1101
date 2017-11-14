@@ -12,7 +12,10 @@
     <string name="get_phone_num">获取手机号</string>
 
     <string-array name="tool_item">
-        <item>canvas</item>
-        <item>获取手机号</item>
+        <item>music</item>
+        <item>尺子</item>
+        <item>表盘</item>
+        <item>缩放</item>
+
     </string-array>
 </resources>

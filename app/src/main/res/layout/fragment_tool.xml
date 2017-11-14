@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.smart.bean.p2pinvest1101.fragment.tool.ToolFragment">
+    tools:context="com.smart.bean.p2pinvest1101.fragment.tool.fragment.ToolFragment">
 
     <GridView
         android:id="@+id/grid_view_test"
