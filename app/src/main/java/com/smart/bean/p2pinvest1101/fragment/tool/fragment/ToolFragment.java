@@ -16,6 +16,7 @@ import com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity.ScaleViewActiv
 import com.smart.bean.p2pinvest1101.fragment.tool.canvas.activity.WatchActivity;
 import com.smart.bean.p2pinvest1101.fragment.tool.canvas.view.ScaleView;
 import com.smart.bean.p2pinvest1101.fragment.tool.music.MusicActivity;
+import com.smart.bean.p2pinvest1101.util.ScreenUtil;
 import com.smart.bean.p2pinvest1101.util.Util;
 import com.smart.holder.CommonAdapter;
 
@@ -43,6 +44,7 @@ public class ToolFragment extends BaseFragment implements OnViewHolderItemClicke
 
     @Override
     protected void initItemView(View rootView) {
+        ScreenUtil.setStatusBarColor(getActivity(),R.color.cyan);
         mGridViewTest = rootView.findViewById(R.id.grid_view_test);
 
     }

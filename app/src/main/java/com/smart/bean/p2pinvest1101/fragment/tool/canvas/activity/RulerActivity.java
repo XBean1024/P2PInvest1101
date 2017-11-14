@@ -12,6 +12,12 @@ public class RulerActivity extends BaseFragmentActivity implements RulerView.OnR
 
     private RulerView mRulerView;
     private TextView mRulerValue;
+
+    @Override
+    protected int initStatusBarColor() {
+        return R.color.yellow;
+    }
+
     @Override
     protected int initLayout() {
         return R.layout.activity_canvas;

@@ -2,12 +2,15 @@ package com.smart.bean.p2pinvest1101.abs;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import com.smart.bean.p2pinvest1101.R;
 import com.smart.bean.p2pinvest1101.callback.OnTitleBarClickedListener;
+import com.smart.bean.p2pinvest1101.util.ScreenUtil;
 import com.smart.bean.p2pinvest1101.view.TitleBar;
 
 import butterknife.ButterKnife;
@@ -22,6 +25,9 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(initLayout());
+        if (initStatusBarColor() !=0) {
+            ScreenUtil.setStatusBarColor(this,initStatusBarColor());
+        }
         mActivity = this;
         unbinder = ButterKnife.bind(this);
         initTitle();
@@ -30,7 +36,7 @@ public abstract class BaseFragmentActivity extends FragmentActivity {
         bindData();
     }
 
-
+    protected abstract int initStatusBarColor();
 
 
     /** 设置主布局

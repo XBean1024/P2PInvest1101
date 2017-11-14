@@ -7,6 +7,11 @@ public class MusicActivity extends BaseFragmentActivity {
 
 
     @Override
+    protected int initStatusBarColor() {
+        return 0;
+    }
+
+    @Override
     protected int initLayout() {
         return R.layout.activity_music;
     }
